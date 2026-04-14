@@ -8,7 +8,8 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI(title=settings.PROJECT_NAME)
 
 origins = [
-    "http://localhost:5173",  # Vite
+    "http://localhost:5173", 
+    "https://chat-bot-frontend-seven-xi.vercel.app/",  # Vite
 ]
 
 app.add_middleware(
