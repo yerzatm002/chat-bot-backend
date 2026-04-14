@@ -7,12 +7,12 @@ from app.api.deps import get_db
 from app.models.chat_log import ChatLog
 
 router = APIRouter()
-chat_service = ChatService()
+
 
 
 @router.post("/chat/message", response_model=ChatResponse)
 def chat_message(request: ChatRequest, db: Session = Depends(get_db)):
-
+    chat_service = ChatService()
     result = chat_service.find_best_match(request.message, db)
 
     # логирование
