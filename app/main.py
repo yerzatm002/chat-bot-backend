@@ -9,7 +9,7 @@ app = FastAPI(title=settings.PROJECT_NAME)
 
 origins = [
     "http://localhost:5173", 
-    "https://chat-bot-frontend-seven-xi.vercel.app/",  # Vite
+    "https://chat-bot-frontend-seven-xi.vercel.app",  # Vite
 ]
 
 app.add_middleware(
